@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="module" client="site" method="upgrade"> 
+   <name>Header</name>
+   <version>1.4.0</version>
+   <creationDate>06 March 2014</creationDate>
+   <author>BdThemes Ltd</author>
+   <authorEmail>info@bdthemes.com</authorEmail>
+   <authorUrl>www.bdthemes.com</authorUrl>
+   <copyright>Copyright © 2013 - All rights reserved.</copyright>
+   <license>GNU General Public License v2.0</license>
+   <description><![CDATA[This module show your heading system. developed by bdthemes ltd.]]></description>
+	<files>
+		<filename module="mod_bdthemes_header">mod_bdthemes_header.php</filename>
+		<filename>mod_bdthemes_header.xml</filename>
+    <filename>index.html</filename>
+    <folder>css</folder>
+    <folder>tmpl</folder>
+    <folder>language</folder>
+  </files>
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_bdthemes_header.ini</language>
+    <language tag="es-ES">language/es-ES.mod_bdthemes_header.ini</language>
+  </languages>
+   
+   <config>
+      <fields name="params">
+         <fieldset name="basic">
+            <field name="heading_type" type="radio" default="built_in" label="Heading Type" description="Select source of your heading" class="btn-group" >
+                <option value="page">Browser Page Title</option>
+                <option value="built_in">Menu Name</option>
+                <option value="custom">Custom Heading</option>
+            </field>
+            <field name="header_background" type="media" label="Header Background" description="Select source for your header background." />
+            <field name="heading_padding" type="text" default="30px" label="Header Padding" description="you can set header top and bottom padding from here" />
+            <field name="custom_header" type="text" label="Custom Header" description="Type text for showing your header." />
+            <field name="header_font_size" type="text" label="Header Font Size" default="48px" description="Select your header font size." />
+            <field name="heading_font_weight" type="radio" default="0" label="Heading Font Weight" description="Select your heading font weight." class="btn-group" >
+                <option value="0">Default</option>
+                <option value="bold">Bold</option>
+                <option value="bolder">Bolder</option>
+            </field>
+            <field name="heading_text_transform" type="radio" default="none" label="Heading Text Transform" description="Select your heading text transform." class="btn-group" >
+                <option value="none">Default</option>
+                <option value="uppercase">Upper Case</option>
+                <option value="lowercase">Lower Case</option>
+                <option value="capitalize">Capitalize</option>
+            </field>
+            <field name="heading_text_align" type="radio" default="left" label="Heading Alignment" description="Select your heading alignment from here." class="btn-group" >
+                <option value="left">Left Align</option>
+                <option value="center">Center Align</option>
+                <option value="right">Right Align</option>
+            </field>
+            <field name="heading_color" type="color" label="Header Color" default="" description="Select your header color." />
+            
+            <field name="custom_sub_header" type="text" label="Custom Sub Header" description="Type text for showing your sub header." />
+            <field name="sub_header_font_size" type="text" label="Sub Header Font Size" default="48px" description="Select your sub header font size." />
+            <field name="sub_heading_font_weight" type="radio" default="0" label="Sub Heading Font Weight" description="Select your sub heading font weight." class="btn-group" >
+                <option value="0">Default</option>
+                <option value="bold">Bold</option>
+                <option value="bolder">Bolder</option>
+            </field>
+            <field name="sub_heading_color" type="color" label="Sub Header Color" default="" description="Select your sub header color." />
+            <field name="back_button" type="radio" default="1" label="Back Button" description="Show or hide your back button as you need" class="btn-group" >
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </field>
+          </fieldset>
+      </fields>
+   </config>
+
+</extension>

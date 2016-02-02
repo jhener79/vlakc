@@ -1,0 +1,687 @@
+// Joomla List all Categories page design.
+
+.categories-list {
+	.page-header {
+		&.item-title {
+			margin: 0px 0px 10px 0px;
+			padding-bottom: 10px;
+			font-size: 15px;
+			line-height: normal;
+			display: block;
+			a {text-decoration: none;}
+		}
+	}
+}
+div {
+	&.login {
+		+ div {
+			> ul.nav-stacked {
+				li {
+					a {
+						&:before {
+							content: "\f105";
+							font-family: FontAwesome;
+							top: 0;
+							left: 0;
+							font-size: 15px;
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Joomla article pagee meta and pagination design
+body {
+	.uk-article {
+		.uk-article-meta {
+			font-size: 14px;
+			font-style: italic;
+			margin-top: 0;
+			a, .uk-meta-author, .uk-meta-category, .uk-meta-tags {
+				text-decoration: none !important; 
+				margin-left: 10px;
+				color: #bbb;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:last-child {
+					&::after {
+						display: none;
+					}
+				}
+				&:after {
+					content: '/';
+					padding-left: 10px;
+				}
+			}
+			a[href*="tags"] {
+				margin-left: 0;
+				&::after {
+					display: none;
+				}
+			}
+			a {
+				&:hover {color: #999;}
+
+			}
+		}
+		.uk-article-title {
+			margin-bottom: 10px;
+			color: @global-link-color;
+		}
+		.uk-pagination {
+			li {
+				margin-bottom: 5px;
+				a {
+					.borderRadius();
+					border: 1px solid @global-link-color;
+					color: @global-link-color;
+					background: transparent;
+					.transition();
+					padding: 5px 12px !important;
+					line-height: normal;
+					&:hover {
+						background: @global-link-color;
+						.textColor(@global-link-color);
+					}
+				}
+			}
+			li.uk-active {
+				span {
+				padding: 5px 12px;
+				.borderRadius();
+				border: 1px solid @global-link-color;
+				line-height: normal;
+				background: @global-link-color;
+				.textColor(@global-link-color);
+					
+				}
+			}
+			li.uk-disabled {
+				span {
+					padding: 5px 12px;
+					.borderRadius();
+					border: 1px solid #DDD;
+					background: rgba(0, 0, 0, 0) !important;
+					line-height: normal;
+					
+				}
+			}
+		}
+	}
+}
+
+.well {
+	padding: 50px 20px;
+	background: #F7F7F7;
+	.btn.btn-primary {
+		padding: 5px 15px 8px 15px;
+		border-radius: 3px;
+		line-height: normal;
+	}
+}
+
+#search-results {
+	.uk-article-title {
+		font-size: 24px;
+		line-height: 28px;
+		margin-bottom: 15px;
+	}
+	.uk-article {
+		padding: 0;
+	}
+}
+
+
+//contact us page style
+.contact {
+	.panel {
+		padding: 0;
+		box-shadow: none;
+		margin: 0 0 2px 0;
+		background: rgba(0, 0, 0, 0.02);
+		.borderRadius(2px);
+	}
+	[class^="icon-"], [class*=" icon-"] {
+		float: left;
+		font-size: 16px;
+		line-height: inherit;
+	}
+	.title {
+		font-size: 1.1em;
+		margin: 0;
+		line-height: normal;
+		padding: 10px 15px;
+		background: #ffffff;
+		a {
+			font-weight: normal;
+			display: block;
+			padding: 10px;
+			text-decoration: none;
+			background: none;
+			span {
+				&:before {
+					font-family: FontAwesome;
+					content: "\f055";
+					margin: 0 7px 0 0;
+					font-size: 15px;
+					display: inline;
+				}
+			}
+
+		}
+	}
+	.pane-toggler-down {
+		a {
+			text-decoration: none;
+			background: none;
+			span {
+				&:before {
+					content: "\f056";
+				}
+			}
+		}
+	}
+	.pane-down {
+		border-top: 1px solid rgba(0,0,0,0.08) !important;				
+	}
+	.pane-slider, .tabs {
+		.contact-position, .contact-address, .contact-contactinfo {
+			padding-left: 20px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+	}
+	legend {
+		font-size: 1.1em;
+		border-bottom: 1px solid #E5E5E5 !important;
+	}
+	.contact-address {
+		address {
+			margin-left: 25px;
+			span {
+				display: block;
+			}
+		}
+	}
+	.contact-contactinfo {
+		p {
+			[class^="contact-"] {
+				margin-left: 10px;
+			}
+		}
+		
+	}
+	.form-actions {background: none;}
+	.contact-miscinfo {
+		.contact-misc {
+			p {
+				padding: 15px;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.contact-position {
+		margin: 15px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.contact-image {
+		margin: 20px 10px;
+		display: inline-block;
+		float: right;
+		.borderRadius(2px);
+		img {
+			width: 100%;
+		}
+	}
+	.required {
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	input[type="text"],input[type="email"] {
+		height: 40px !important;
+	}
+	.contact_email_copy {
+		input {
+			float: left;
+		}
+	}
+
+	.row-fluid {
+		width: 100%;
+	 .span12 {
+			width: 100%;
+		}
+	}
+
+	.contact-form {
+		padding: 15px;
+		textarea {
+			height: 200px;
+		}
+		.control-group {
+			margin: 15px 0;
+		}
+	}
+	#contact-slider {
+		margin: 0;
+	}
+	.tabs {
+		span {
+			h3 {
+				font-size: 1.3em;
+				margin: 0;
+			}
+		}
+		dt {
+			background: rgba(255,255,255, 0.05) !important;
+		}
+		.open {
+			background: rgba(255, 255, 255, 0.1) !important;
+		}
+	}	
+}
+
+label.invalid {
+	border: none;
+}
+.alert-danger p, .alert-error p {margin: 0px;}
+
+.contact {
+ 	&.plain-form {
+ 		.current {
+ 			.tabs {
+ 				overflow: hidden;
+ 			}
+ 		}
+ 	}
+
+	.contact-form {
+		input[type="text"], 
+		input[type="email"],
+		textarea {
+			width: 100%;
+			box-sizing: border-box !important;
+		}
+		input[type="checkbox"]  {
+			margin: 0 5px 0 0;
+
+		}
+
+	}
+	dl.tabs dt {
+		float: left;
+		padding: 10px;
+		border-color: rgba(0, 0, 0, 0.05) !important;
+		border-top: 1px solid;
+		border-left: 1px solid;
+		border-right: 1px solid;
+		margin-right: 3px;
+		a {
+			text-decoration: none;
+		}
+	}
+	.current {
+		clear: both;
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		padding: 10px 10px;
+		background: rgba(255, 255, 255, 0.05);
+	}
+}
+
+.tm-content {
+	.registration, .login, .reset, .remind  {
+		select, 
+		textarea, 
+		input[type="text"], 
+		input[type="password"], 
+		input[type="datetime"], 
+		input[type="datetime-local"], 
+		input[type="date"], 
+		input[type="month"], 
+		input[type="time"], 
+		input[type="week"], 
+		input[type="number"], 
+		input[type="email"], 
+		input[type="url"], 
+		input[type="search"], 
+		input[type="tel"], 
+		input[type="color"], 
+		.inputbox {
+		  display: block;
+		  width: 100%;
+		  height: 48px;
+		  padding: 10px 20px;
+		  font-size: 14px;
+		  line-height: 1.857;
+		  color: #555555;
+		  background-color: #ffffff;
+		  background-image: none;
+		  border: 1px solid #dce2e8;
+		  border-radius: 2px;
+		  box-sizing: border-box;
+		}	
+	}
+}
+
+// Remind page design
+body {
+	.remind, .reset, .finder {
+		padding: 35px;
+		background-color: rgb(241, 241, 241);
+		.control-group {
+			margin-bottom: 0;
+		}
+		input[type="text"], 
+		input[type="email"] {
+			margin-bottom: 15px;
+			padding: 8px;
+		}
+		button {
+			padding: 12px 20px;
+		}
+	}
+	.finder {
+		#advancedSearch {
+			select {
+				width: 100%;
+				margin-bottom: 15px;
+				height: 46px;
+				box-sizing: border-box;
+				background-color: #fefefe;
+			}
+		}
+		.word {
+			input[type="text"], .btn {
+				margin-bottom: 5px;
+				padding: 10px 20px;
+				border: 1px solid transparent;
+			}
+			input[type="text"] {
+				margin-right: 2px;
+			}
+			a.btn {
+				background: #aaa;
+				color: white;
+				&:hover {
+					background: #bbb;
+				}
+			}
+		}
+		#search-results {
+			> p {
+				padding: 10px;
+				background-color: @global-link-color;
+				color: #fff;
+				border-radius: 2px;
+			}
+		}
+	}
+}
+
+.login-wrap {
+  background: #fdfdfd;
+  width: 360px;
+  padding: 26px;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.1)
+}
+
+@media screen and (max-width: 767px) {
+  .login-wrap {
+    width: auto;
+  }
+}
+.login-wrap form .control-label {
+  text-align: left;
+  padding-top: 0;
+}
+.login-wrap form label {
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  font-size: 12px;
+}
+.login-wrap form .form-group {
+  margin-bottom: 26px;
+}
+.login-wrap form .form-group input[type="text"],
+.login-wrap form .form-group input[type="password"] {
+  width: 100%;
+  box-shadow: none;
+}
+.login-wrap form .form-group .checkbox {
+  padding-top: 0;
+}
+.login-wrap form .form-group .checkbox label {
+  text-transform: none;
+}
+.login-wrap form .form-group .checkbox input[type="checkbox"] {
+  margin-top: 4px;
+}
+.login-wrap .btn {
+  width: 100%;
+}
+.login-wrap .btn, .registration .btn, .profile-edit .btn, .logout .btn  {
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  padding: 12px 20px !important;
+}
+.login-wrap .other-links {
+  margin-bottom: 0 !important;
+}
+.login-wrap .other-links ul {
+  padding: 0;
+  font-size: 13px;
+  border-top: 1px solid #eeeeee;
+}
+.login-wrap .other-links ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eeeeee;
+  list-style: none;
+}
+.logout {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.logout .form-horizontal .control-group .controls {
+  margin-left: 0;
+}
+.logout-description {
+	margin-bottom: 20px;
+}
+.form-register fieldset {
+  padding: 0 0 10px;
+}
+.form-register p {
+  margin: 0 0 5px;
+}
+.form-register p.form-des {
+  margin: 15px 0;
+}
+.form-register label {
+  display: block;
+  float: left;
+  font-weight: bold;
+  text-align: right;
+  width: 130px;
+}
+.form-register .input,
+.form-register .inputbox {
+  margin-left: 10px;
+  width: 200px;
+}
+.form-register .btn,
+.form-register .button {
+  margin-left: 140px;
+}
+.registration fieldset dt {
+  margin-right: 5px;
+}
+.admintable textarea {
+  max-width: 90% !important;
+  resize: none;
+}
+.com_mailto body {
+  padding: 13px;
+}
+.com_mailto .t3-mainbody {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.com_mailto .t3-content {
+  width: auto;
+}
+#mailto-window {
+  background: #fff;
+  margin: 10px 0 20px;
+  padding: 0;
+  position: relative;
+}
+#mailto-window h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #26292d;
+}
+#mailtoForm .formelm {
+  padding: 5px 0;
+  vertical-align: middle;
+  overflow: hidden;
+}
+#mailtoForm .formelm label {
+  display: inline-block;
+  float: left;
+  font-weight: bold;
+  vertical-align: middle;
+  width: 100px;
+}
+#mailtoForm p {
+  margin-top: 20px;
+}
+#mailtoForm .input,
+#mailtoForm .inputbox {
+  width: 65%;
+}
+#mailtoForm .btn,
+#mailtoForm .button,
+#mailtoForm button {
+  margin-right: 5px;
+}
+.user-details {
+  padding: 10px 0;
+}
+.user-details p {
+  margin: 0 0 5px;
+}
+.user-details label {
+  display: block;
+  float: left;
+  font-weight: bold;
+  text-align: right;
+  width: 130px;
+}
+.user-details .input,
+.user-details .inputbox {
+  margin-left: 10px;
+  width: 200px;
+}
+.user-details .btn,
+.user-details button {
+  margin-left: 140px;
+}
+.user-details .paramlist .paramlist_key {
+  padding: 0 0 5px;
+  width: 130px;
+}
+.user-details .paramlist .paramlist_value {
+  padding: 0 0 5px;
+}
+.user-details .user_name span {
+  font-weight: bold;
+  padding-left: 10px;
+}
+.reset .form-validate p,
+.remind .form-validate p {
+  background: #eeeeee;
+  border: 1px solid #eeeeee;
+  margin-bottom: 26px;
+  padding: 13px 26px;
+  border-radius: 4px;
+}
+.reset .form-validate fieldset dl,
+.remind .form-validate fieldset dl {
+  margin: 0;
+}
+.reset .form-validate fieldset dt,
+.remind .form-validate fieldset dt {
+  margin: 4px 0 0 0;
+}
+.reset .form-group + .form-group,
+.remind .form-group + .form-group {
+  display: none;
+}
+.profile-edit input {
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .profile-edit input {
+    float: left;
+    width: 50%;
+  }
+}
+.profile-edit select {
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .profile-edit select {
+    float: left;
+    width: 50%;
+  }
+}
+.profile-edit select + button {
+  margin-left: 5px;
+}
+.view-profile .profile {
+  border: 1px solid #dce2e8;
+  padding: 26px !important;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .view-profile .profile {
+    width: 700px;
+  }
+}
+.view-profile .profile legend {
+  border: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+@media screen and (min-width: 992px) {
+  .view-profile .profile legend {
+    width: 160px;
+    text-align: right;
+  }
+}

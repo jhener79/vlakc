@@ -1,0 +1,358 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Navbar
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+@navbar-background: 							transparent;
+@navbar-color:                                  @global-color;
+@navbar-link-color:                             @global-link-color;
+@navbar-link-hover-color:                       @global-link-hover-color;
+
+@navbar-nav-height:                        		65px;
+@navbar-nav-line-height:                        @navbar-nav-height;
+@navbar-nav-color:                              #d5d5d5;
+@navbar-nav-font-size:                          14px;
+@navbar-nav-hover-color:                        #ffffff;
+@navbar-nav-onclick-color:                      #ffffff;
+@navbar-nav-active-color:                       #ffffff;
+
+@navbar-brand-font-size:                        round((@global-font-size * 1.28)); // 18px / 20px
+@navbar-brand-color:                            @global-color;
+@navbar-brand-hover-color:                      @global-color;
+
+@navbar-toggle-font-size:                       round((@global-font-size * 1.28)); // 18px / 20px
+@navbar-toggle-color:                           @global-color;
+@navbar-toggle-hover-color:                     darken(@global-color, 10%);
+
+@nav-navbar-hover-color: 						#666;
+@nav-navbar-color: 						        #a5a5a5;
+@navbar-nav-hover-background:					transparent;
+@navbar-nav-active-background:					transparent;
+@navbar-nav-onclick-background:					transparent;
+// Component
+// ========================================================================
+
+.hook-navbar() {
+
+}
+
+
+// Sub-object: `uk-navbar-nav`
+// ========================================================================
+
+.hook-navbar-nav() {}
+
+// Hover
+.hook-navbar-nav-hover() {}
+
+// OnClick
+.hook-navbar-nav-onclick() {}
+
+// Active
+.hook-navbar-nav-active() {}
+
+
+// Sub-object: `uk-navbar-content`
+// ========================================================================
+
+.hook-navbar-content() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-navbar-misc() {
+	.uk-navbar-center {
+		max-width: 70%;
+	}
+	.navbar-default {
+		.tm-navigation-wrapper {
+			position: relative;
+			text-align: center;
+		}
+		.uk-navbar-nav {
+			> li {
+				> a {
+					text-transform: uppercase;
+					position: relative;
+					font-weight: bold;
+				}
+			}
+		}
+		.uk-sticky-placeholder {
+			.tm-navbar {
+				&:before, &:after {
+					.transition(all 1s cubic-bezier(0, 0.8, 0.6, 1));
+				}
+			}
+			> .uk-active {
+				.tm-navbar {
+					&:before {
+						right: 200%;
+					}
+					&:after {
+						left: 200%;
+					}
+				}
+			}
+		}
+	}
+	.uk-navbar-nav {
+		div.uk-dropdown {
+			.uk-nav-navbar {
+				.uk-nav-sub {
+					font-size: @dropdown-font-size - .1;
+				}
+				> li {
+					> a[class*="badge-"] {
+						&:before {
+							top: 12px;
+						}
+					}
+				}
+			}
+			.uk-nav-navbar {
+				margin: 0px;
+			}
+		}
+		> li.uk-active {
+			.uk-nav-navbar {
+				> li.uk-active {
+					> a {
+						color: @nav-navbar-hover-color;
+					}
+				}
+			}
+		}
+		> li.uk-parent {
+			.uk-nav-navbar {
+				> li.uk-parent {
+					> a {
+						font-weight: 700;
+					}
+					&.uk-active {
+						.uk-nav-sub {
+							> li.uk-active {
+								> a {
+									font-weight: 700;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		li {
+			a[class*="badge-"] {
+				position: relative;
+				&:before {
+					position: absolute;
+					right: 0;
+					text-transform: uppercase;
+					font-size: 7px;
+					padding: 4px 6px 3px;
+					border-radius: 2px;
+					text-align: center;
+					line-height: 8px;
+					color: #fff;
+					font-family: arial;
+				}
+			}
+			a.badge-new {
+				&:before {
+					content: "new";
+					background-color: #8dd538;							
+				}
+			}
+			a.badge-hot {
+				&:before {
+					content: "hot";
+					background-color: #f14b51;							
+				}
+			}
+			a.badge-populer {
+				&:before {
+					content: "populer";
+					background-color: #f39c12;							
+				}
+			}
+		}
+	}
+
+	// Navbar style 2
+	.navbar-style2 {
+		.uk-navbar-nav {
+			> li {
+				> a {
+					background: transparent;
+					text-transform: uppercase;
+					position: relative;
+					&:after {
+						position: absolute;
+					    bottom: 20px;
+					    left: 15px;
+					    content: '';
+					    height: 1px;
+					    width: 0px;
+					    opacity: 0;
+						background: @global-link-color;
+						.transition(all .2s ease-in-out);
+					}
+				}
+				&:hover {
+					a {
+						&::after {
+							opacity: 1;
+							width: 20px;
+						}
+					}
+				}
+			}
+			> li.uk-active {
+				a:after {
+					opacity: 1;
+					width: 20px;
+				}
+			}
+		}	
+	}
+
+// Navbar style 3
+.navbar-style3 {
+	.uk-dropdown-navbar {margin-top: 6px;}
+	.uk-navbar-nav {
+		> li {
+			> a {
+				position: relative;
+				margin-right: 18px;
+				padding: 0 12px 0 0;
+				&:before {
+					position: absolute;
+					top: 50%;
+					right: 0;
+					content: '';
+					height: 12px;
+					width: 1px;
+					background-color: @global-link-color;
+					transform: rotate(30deg) translateY(-50%);
+				}
+
+			}
+			&:last-child {margin-right: 0;
+				a {
+					padding-right: 0;
+					margin-right: 0;
+					&:before {display: none;}
+				}
+			}
+		}
+	}
+}
+
+	// Navbar style 4
+	.navbar-style4 {
+		.uk-navbar-nav {
+			> li {
+				> a {
+					background: transparent;
+					text-transform: uppercase;
+					position: relative;
+					-webkit-transform: translateZ(0);
+					transform: translateZ(0);
+					&:before {
+						content: "";
+						position: absolute;
+						z-index: -1;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: @navbar-nav-hover-background;
+						.transform(scaleY(0));
+						-webkit-transform-origin: 50% 100%;
+						transform-origin: 50% 100%;
+						.transition(transform 0.5s ease-out);
+					}
+				}
+				&:hover > a {
+					&::before {
+						.transform(scaleY(1));
+						-webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+						transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+					}
+
+				}
+			}
+			> li.uk-active {
+				a:before {
+					-webkit-transform: scaleY(1);
+					transform: scaleY(1);
+				}
+			}
+		}
+	}
+	// Navbar style 5
+	.navbar-style5 {
+		.uk-navbar-nav {
+			> li {
+				&:last-child {margin-right: 0;}
+				> a {
+					background: transparent;
+					text-transform: uppercase;
+					position: relative;
+					&::before, 
+					&::after {
+					  display: inline-block;
+					  opacity: 0;
+					  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+					  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+					  transition: transform 0.3s, opacity 0.2s;
+					  margin-top: -1px;
+					}
+					&:before {
+						  content: '[';
+						  -webkit-transform: translateX(20px);
+						  -moz-transform: translateX(20px);
+						  transform: translateX(20px);
+						  position: absolute;
+					}
+					&:after {
+						  content: ']';
+						  -webkit-transform: translateX(-20px);
+						  -moz-transform: translateX(-20px);
+						  transform: translateX(-20px);
+						  position: absolute;
+					}
+					&:hover {
+						&::before {
+						  opacity: 1;
+						  -webkit-transform: translateX(-10px);
+						  -moz-transform: translateX(-10px);
+						  transform: translateX(-10px);
+						  color: @global-link-color;
+						}
+						&::after {
+						  opacity: 1;
+						  -webkit-transform: translateX(5px);
+						  -moz-transform: translateX(5px);
+						  transform: translateX(5px);
+						  color: @global-link-color;
+						}
+					}
+				}
+			}
+		}
+	}
+	body .uk-dropdown-navbar .uk-form-row button[type*='submit'] {width: 100%;}
+	body .uk-dropdown-navbar input[type="text"],
+	body .uk-dropdown-navbar input[type="password"] {background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.08);}
+	body .uk-dropdown-navbar .uk-form ul > li > a {font-size: 11px;}
+	body .uk-dropdown-navbar .uk-form ul > li {line-height: 14px;margin-top: 5px;}
+	body .uk-dropdown-navbar ul.uk-list li a:before {content: "\f1db";font-family: FontAwesome;display: inline-block;left: 0;top: -1px;margin-right: 5px;font-size: 8px;position: relative;}
+	body .uk-dropdown-navbar .uk-form label {color: #666;}
+}

@@ -1,0 +1,78 @@
+.auto-hw-logo {
+	width: auto;
+	height: 100%;
+}
+
+.logo-container {
+	display: inline-block;
+}
+.logo-container.has-infocard {
+	position: relative;
+	z-index: 222;
+}
+#infocard {
+	position: absolute;
+	top: 100%;
+	margin-top: 5px;
+	width: 440px;
+	padding: 20px;
+	background: #fff;
+	color: #666;
+	border-radius: 2px;
+	font-size: 12px;
+	display: block;
+	visibility: hidden;
+	opacity: 0;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	-ms-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+	-webkit-transition-delay: .3s;
+	-moz-transition-delay: .3s;
+	-ms-transition-delay: .3s;
+	-o-transition-delay: .3s;
+	transition-delay: .3s;
+	-webkit-backface-visibility: hidden;
+}
+.logo-container.has-infocard:hover #infocard {
+	visibility: visible;
+	opacity: 1;
+	margin-top: 10px;
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-ms-transition-delay: 0s;
+	-o-transition-delay: 0s;
+	-transition-delay: 0s;
+}
+#infocard h1, #infocard h2, #infocard h3, #infocard h4 {
+	font-size: 12px;
+	line-height: 20px;
+	margin-top: 10px;
+}
+#infocard .info-social li {
+	display: inline-block;
+	margin-right: 20px;
+}
+#infocard .info-social li {
+	display: inline-block;
+	margin-right: 20px;
+}
+#infocard p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+#infocard .uk-icon-button {
+	border-radius: 3px;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 13px;
+}
+#infocard .infocard-social {
+}
+#infocard .social-header, #infocard .infocard-social span {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}

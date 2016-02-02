@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="module" client="site" method="upgrade"> 
+   <name>Logo Module</name>
+   <version>1.3.0</version>
+   <creationDate>02 March 2014</creationDate>
+   <author>Selim Rana</author>
+   <authorEmail>info@bdthemes.com</authorEmail>
+   <authorUrl>www.bdthemes.com</authorUrl>
+   <copyright>Copyright © 2013 - All rights reserved.</copyright>
+   <license>GNU General Public License v2.0</license>
+   <description><![CDATA[This module show your logo. developed by bdthemes ltd.]]></description>
+	<files>
+        <filename module="mod_bdthemes_logo">mod_bdthemes_logo.php</filename>
+        <filename>mod_bdthemes_logo.xml</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+	</files>
+
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_bdthemes_logo.ini</language>
+  </languages>
+   
+   <config>
+      <fields name="params">
+         <fieldset name="basic">
+            <field name="logo" type="media" label="MOD_BDTHEMES_LOGO_LOGO" description="Select your picture which you want to show for this logo" />
+            <field name="ratina_logo" type="media" label="Ratina Logo" description="If you want ratina logo so please add your logo-name@2x.png at same place where you keep the main logo file, so when you select Yes it will load the @2x logo on ratina display device automazically." />
+            <field name="logo_custom_url" type="text" default="" label="Logo Custom URL" description="If you want to add any Custom URL for your logo you can add from here. Otherwise if you take empty this text box, then logo's link will be default root url in your site." />  
+            <field name="logo_margin" type="text" default="" label="Logo Margin" description="Select your margin which you want to show for this logo" />
+            <field name="logo_padding" type="text" default="" label="Logo Padding" description="Select your padding which you want to show for this logo" />  
+            <field name="logo_height" type="text" default="" label="Logo Height" description="Select your logo height which you want to set for logo area" />  
+            <field name="logo_auto_width" type="checkbox" default="" label="Auto Width" description="If you checked here, automatic adjust your logo width." /> 
+            <field name="logo_alt_text" type="text" default="" label="Logo Alt Text" description="You can set logo alternate text from here." />  
+            <field name="logo_custom_css" type="textarea" default="" label="Logo Custom CSS" description="You can set custom CSS for logo from here." />  
+            
+          </fieldset>
+          <fieldset name="advanced">
+             <field name="has_infocard" type="radio" default="0" label="Info Card" description="If you want info card with hover so you need to enable it and write your info card text on bellow text box." class="btn-group">
+               <option value="0">JNO</option>
+               <option value="1">JYES</option>
+            </field>
+            <field name="card_margin" type="text" default="" label="Card Margin" description="Select your margin which you want to show for this logo" />
+            <field name="infocard_text" type="editor" class="inputbox" editor="desired|alternative" default="" filter="raw" label="Info Card Text" description="Info card text which show when you hover the logo on your site." />
+            <field name="infocard_text_note" type="note" class="alert" label="Info Card Text Notice" description="You can insert any HTML tag here but keep in mind you must need to know how html work or how to write html." />
+          </fieldset>
+      </fields>
+   </config>
+
+</extension>
